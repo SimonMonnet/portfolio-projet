@@ -11,16 +11,43 @@ body {
     background-image: url(fond.jpg);
 }
 
-section {
-    height: 100vh;
-    width: 100vh;
-    scroll-snap-align: start;
+
+
+.scroll-parent {
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+section{
+  height: 700px;
+}
+
+
+.dots {
+  position:fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 5px;
 }
 
 a{
 color: #e1d7b2;
 }
+
 .nav_bar{
+  height: 0px;
     padding: 50px;
     display: flex;
     justify-content: space-between;
@@ -46,27 +73,142 @@ backdrop-filter: blur(15px) grayscale(0.5) opacity(0.8);
 }
 
 
-
-
-
-
-
-
-
-
-
-#pour_voir{
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    visibility: visible;
-    position:relative;
+.accueil{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
 }
-#pour_voir:hover{
-visibility: hidden;
-    font-size: xx-large;
+
+h1{
+  color: #ccf381;
+  font-size: 56px;
+  position: absolute;
+  margin-top: 230px;
+  margin-left: 150px;
+}
+h1, h2 {
+  font-size: xx-large;
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
 
 }
+
+.acceuil p {
+  color: whitesmoke;
+  font-size: 22px;
+  width: 300px;
+  margin-left: 150px;
+margin-top: -25px;
+text-align: center;
+}
+
+
+#titre_style{
+  display: flex;
+  align-items: start;
+}
+
+.acceuil img {
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  box-shadow: 18px 60px 48px 0px #000000;
+  margin-left: 720px;
+    margin-top: 150px;
+}
+
+
+
+.presentation p {
+  color:#E3DEC7;
+  width: 410px;
+  font-size: 20px;
+}
+.presentation h2{
+  font-size: xx-large;
+  color: #0044ff;
+}
+
+.presentation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+justify-content: space-around;
+flex-direction:row;
+}
+
+.parcours h2{
+  color: #ccf381;
+  width: 150px;
+  margin-left: 120px;
+}
+
+.parcours p{
+  color:#E3DEC7;
+  width: 410px;
+  font-size: 19px;
+  margin-left: 150px;
+}
+.parcours{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.parcours img {
+  margin-right: 200px;
+  width: 300px;
+  height: 300px;
+}
+
+
+.experience h2 {
+  color: #0044ff;
+  font-size: xx-large;
+}
+
+.experience{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  justify-content: center;
+}
+
+.prem_exp{
+  border-right: solid 5px white ;
+}
+
+.prem_exp p {
+  color:#E3DEC7;
+  text-align: center;
+  width: 450px;
+  margin-top: 60px;
+  font-size: 20px;
+}
+.prem_exp a {
+  font-size: 18px;
+  color: #FF265F;
+}
+
+.experience div {
+  height: 500px;
+  align-items: center;
+  display: center;
+  padding: 50px;
+  text-align: center;
+}
+.experience li {
+  padding: 15px;
+  margin-top: 15px;
+  color:#E3DEC7;
+}
+
+
 .form-container {
     width: 1255px;
     margin-top: 40px;
@@ -87,6 +229,7 @@ visibility: hidden;
     background-size: 200% 100%;
     animation: gradient 5s ease infinite;
     position:relative;
+    opacity: 85%;
   }
   
   @keyframes gradient {
@@ -336,6 +479,7 @@ visibility: hidden;
 
 
 .card {
+  opacity: 85%;
     margin-left: 4px;
     position: relative;
     width: 1250px;
@@ -462,6 +606,53 @@ visibility: hidden;
     fill: currentColor;
     color: rgba(255, 255, 255, 1);
   }
+
+
+  
+  
+  .block {
+    position: relative;
+    padding: 25px;
+    width: 210px;
+    margin-top: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+    margin-left: 100px;
+
+  
+    background: linear-gradient(0deg, #000, #272727);
+  }
+  
+  .block:before, .block:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 100%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+  }
+  
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .block:after {
+    filter: blur(15px);
+  }
+
 
 
 

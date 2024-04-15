@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant le bon appétit</title>
+    <link rel="stylesheet" href="resto.css">
+</head>
+
+<body>
+    <header>
+        <h1>Le Bon Appétit</h1>
+        <nav>
+            <ul>
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#menu">Menu </a></li>
+                <li><a href="#horaires">Horaires </a></li>
+                <li><a href="#localisation">Localisation</a></li>
+                <li><a href="https://www.ubereats.com/fr">Réservez sur Fork</a></li>
+                <li><a href="#reservez">Réservez</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <section class="section_style" id="presentation_style">
+            <h2 id="presentation">Présentation</h2>
+            <p>Bienvenue au restaurant Le Bon Appétit ! Nous sommes fiers de vous proposer une cuisine délicieuse
+                préparée avec des ingrédients frais et locaux.</p>
+
+            <img src="resto.jpg" alt="bon plat">
+
+        </section>
+
+
+        <section class="section_style">
+            <h2 id="menu">Menu</h2>
+            <p><strong>Voici un aperçu de notre menu</strong> :</p>
+            <ul>
+                <li>Entrée</li>
+                <li>Plats Principaux</li>
+                <li>Desserts</li>
+                <li>Boissons</li>
+            </ul>
+            <p>Nous avons également des options <strong>végetariennes et sans gluten !</strong></p>
+
+        </section>
+
+        <section class="section_style">
+            <h2 id="horaires">Horaires</h2>
+            <p><strong>Nous sommes ouverts :</strong></p>
+
+            <ul>
+                <li>Lundi - Vendredi : 11h - 22h</li>
+                <li>Samedi - Dimanche : 10h - 23h</li>
+            </ul>
+
+        </section>
+        <section class="section_style">
+            <h2 align="center">Tableau des Spécialités</h2>
+
+            <table border="1" cellpadding="25">
+                <thead>
+                    <tr>
+                        <th>Plat </th>
+                        <th>Description</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Salade Niçoise</th>
+                        <th>Salade composée avec thon, oeufs, tomates, olives</th>
+                        <th>12€</th>
+                    </tr>
+                    <tr>
+                        <th>Boeuf Bourguignon</th>
+                        <th>Plat traditionnel de viende de boeuf mijotée au carottes, oignons et vin rouge</th>
+                        <th>15€</th>
+                    </tr>
+                    <tr>
+                        <th>Tarte Tatin</th>
+                        <th>Tarte renversée au pommes caramélisées</th>
+                        <th>8€</th>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="section_style">
+            <h2 align="center">Menu</h2>
+
+
+            <table id="table_2" border="1" align="center" cellpadding="25">
+                <thead>
+                    <tr>
+                        <th>Plat </th>
+                        <th>Description</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Entrée</th>
+                        <th>
+                            <ul>
+                                <li>Salade de saison</li>
+                                <li>Soupe du jour</li>
+                            </ul>
+                        </th>
+                        <th>
+                            <ul>
+                                <li>8€ </li>
+                                <li>6€ </li>
+                            </ul>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Plats Principaux</th>
+                        <th>
+                            <ul>
+                                <li>Filet de Saumon grillés avec légumes rotis</li>
+                                <li>Magret de canard avec sauce aux airelles</li>
+                            </ul>
+                        </th>
+                        <th>
+                            <ul>
+                                <li>18€ </li>
+                                <li>22€ </li>
+                            </ul>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Desserts</th>
+                        <th>
+                            <ul>
+                                <li>Tarte au citron meringuée</li>
+                                <li>Crème brulée</li>
+                            </ul>
+                        </th>
+                        <th>
+                            <ul>
+                                <li>7€ </li>
+                                <li>6€ </li>
+                            </ul>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section_style">
+            <h2 id="localisation">Localisation</h2>
+            <p><strong>Nous sommmes situés au :</strong></p>
+            <p><em>123 Rue de la Gourmandise,</em></p>
+            <p><em> 75001 Paris </em> </p>
+            <p><strong>Venez nous rendre visite !</strong></p>
+        </section>
+        <section class="section_style">
+
+            <h2>Réservation</h2>
+            <p> <strong id="para">Pour toute réservation, veuillez remplir le formulaire ci-dessous</strong></p>
+
+            <form class="form_marge" method="post" action="envoyer-email.php" id="reservez">
+
+                <p>
+                    <label for="nom">Votre nom :</label>
+                    <br>
+                    <input type="text" name="nom" id="nom" size="40" maxlength="30" required>
+                </p>
+                <p> <label for="mail">Votre mail :</label>
+                    <br>
+                    <input type="text" name="mail" id="mail" placeholder="Ex. : Mathieu-jaune@gmail.com" size="60"
+                        maxlength="50">
+                </p>
+                <div>
+                    <p>
+                        <label for="numero_tel">Veuillez saisir un numéro de téléphone :</label>
+                        <br>
+                        <input placeholder="format: XX XX XX XX XX" id="numero_tel" name="numero_tel" type="tel"
+                            required pattern="[0-9]{2} [0-99]{2} [0-99]{2} [0-99]{2} [0-99]{2}" />
+
+                    </p>
+                    <p>
+                        <label for="date">Date de réservation :</label>
+                        <br>
+                        <input type="date" id="date" name="date-res" value="2024-03-28" min="2024-03-27"
+                            max="2024-12-31" />
+
+                    </p>
+                    <p>
+                        <label for="horraire">Heure de réservation :</label>
+                        <br>
+                        <input type="time" id="horraire" name="horraire" min="10:00" max="23:00" required />
+                    </p>
+                    <p> <label for="nb_pers">Nombre de personnes :</label>
+                        <br>
+                        <input type="number" id="nb_pers" name="nb_pers" min="1" max="25" required />
+                    </p>
+                    <p>
+                        <input id="btn" type="submit" value="Réserver">
+
+                    </p>
+
+            </form>
+
+            </p>
+
+        </section>
+
+
+
+    </main>
+    <footer>
+        <p>© 2024 Le Bon Appétit : Tous Droits Réservés.</p>
+    </footer>
+</body>
+
+</html>
